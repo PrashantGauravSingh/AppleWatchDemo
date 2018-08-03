@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch42" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14033"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <label width="1" alignment="left" text="Snow" textAlignment="center" id="E16-tc-Ne5"/>
+                        <imageView alignment="left" image="snow" animationDuration="0.5" id="fu5-m3-pIw">
+                            <gestureRecognizers>
+                                <swipeGestureRecognizer id="9ox-eW-guz">
+                                    <connections>
+                                        <action selector="swipeHandle:" destination="AgC-eL-Hgc" id="uUe-pe-4mh"/>
+                                    </connections>
+                                </swipeGestureRecognizer>
+                            </gestureRecognizers>
+                        </imageView>
+                        <button width="1" alignment="left" title="Weather Update" id="80L-iC-qkr">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="0.02143779551" blue="0.65236042169999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="UpdateClicked" destination="AgC-eL-Hgc" id="wGp-b3-fIj"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="updateButton" destination="80L-iC-qkr" id="tZ2-yH-5eN"/>
+                        <outlet property="weatherImage" destination="fu5-m3-pIw" id="PZJ-aD-j3J"/>
+                        <outlet property="weatherLabel" destination="E16-tc-Ne5" id="cDi-y3-xe8"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+</document>
